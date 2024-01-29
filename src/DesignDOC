@@ -1,0 +1,68 @@
+ Number Converter Project Design Document
+
+ Overview
+
+The Number Converter project aims to provide a user-friendly interface for converting numbers between different bases (binary, octal, decimal, and hexadecimal). The project is implemented in Java, utilizing object-oriented programming principles to organize the code.
+
+ Components
+
+ 1. `NumberConverter` Class
+
+ Responsibilities:
+- Handle the conversion of numbers between different bases.
+- Validate user input for the base and the entered number.
+- Store the original number and its digits.
+
+ Methods:
+- `NumberConverter(int number, int base)`: Constructor for creating a NumberConverter object.
+- `isValidNumber(String number, int base)`: Check if the entered number is valid for the specified base.
+- `convertToBinary()`: Convert the original number to binary.
+- `convertToOctal()`: Convert the original number to octal.
+- `convertToHexadecimal()`: Convert the original number to hexadecimal.
+- `convertToDecimal()`: Return the original number in decimal format.
+- `displayOriginalNumber()`: Display the original number.
+
+ 2. `ConverterRunner` Class
+
+ Responsibilities:
+- Provide a user interface for interacting with the Number Converter.
+- Get user input for the base and the number.
+- Display the converted numbers based on user input.
+
+ Methods:
+- `main(String[] args)`: The entry point of the program; orchestrates user interactions and conversions.
+
+ Design Considerations
+
+ Input Validation
+
+- Input for the base is validated to ensure it is one of the supported bases (2, 8, or 10).
+- The entered number is validated to ensure it is a valid number for the specified base.
+
+ Exception Handling
+
+- IllegalArgumentExceptions are used to handle invalid user input gracefully.
+- Errors are caught and displayed to the user for a better user experience.
+
+ Separation of Concerns
+
+- The `NumberConverter` class is responsible for handling conversions and maintaining the original number.
+- The `ConverterRunner` class is responsible for user interactions and displaying results.
+
+ Future Enhancements
+
+1. Support for Additional Bases:
+   - Extend the project to support additional bases, such as base-16 (hexadecimal).
+
+2. Graphical User Interface (GUI):
+   - Implement a graphical user interface to enhance user experience.
+
+3. Error Handling Improvements:
+   - Enhance error handling to provide more descriptive messages for users.
+
+4. Performance Optimization:
+   - Optimize the conversion algorithms for improved performance with large numbers.
+
+ Conclusion
+
+The Number Converter project is designed to be extensible, user-friendly, and maintainable. It adheres to best practices in object-oriented design and provides a solid foundation for future enhancements.
